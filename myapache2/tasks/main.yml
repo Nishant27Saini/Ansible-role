@@ -1,0 +1,17 @@
+---
+# tasks file for myapache2
+- package:
+    name: "{{ p }}"
+    state: present
+- copy:
+    dest: "/var/www/html"
+    src: "index.html"
+- service:
+    name: "{{ p }}"
+    state: restarted
+    enabled: yes
+- firewalld:
+    port: "{{ port }}"
+    state: enabled
+    permanent: yes
+    immediate: yes
