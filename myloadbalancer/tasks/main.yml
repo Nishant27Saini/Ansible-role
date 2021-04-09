@@ -1,0 +1,16 @@
+---
+# tasks file for myloadbalancer
+- package: 
+    name: "{{ p }}"
+    state: present
+- template:
+    dest: "/etc/haproxy/haproxy.cfg"
+    src: "haproxy.j2"
+- service:
+    name: "{{ p }}"
+    state: restarted
+- firewalld:
+    port: "{{ port }}"
+    state: enabled
+    permanent: yes
+    immediate: yes

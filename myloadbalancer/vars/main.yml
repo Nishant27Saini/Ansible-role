@@ -1,0 +1,5 @@
+---
+# vars file for myloadbalancer
+p: haproxy
+port: 8080/tcp
+d: /etc/haproxy/haproxy.cfg
