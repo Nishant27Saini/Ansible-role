@@ -1,0 +1,6 @@
+[web]
+192.168.29.209  ansible_user=root  ansible_ssh_pass=nishant123 ansible_connection                                                                                                            n=ssh
+192.168.29.124  ansible_user=root  ansible_ssh_pass=nishant123 ansible_connection                                                                                                             n=ssh
+
+[hap]
+192.168.29.26  ansible_user=root   ansible_ssh_pass=nishant123 ansible_connection                                                                                                            n=ssh
